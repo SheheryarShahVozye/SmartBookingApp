@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F18DAA4B-2AC7-4FEB-92FA-B98442E18E80"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B341A75-A9BA-4F66-A75B-1554631A8ECA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartBookings/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "RouteManager"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "9B341A75-A9BA-4F66-A75B-1554631A8ECA - c250a9648c810a85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmartBookings.RouteManager.init() -&gt; SmartBookings.RouteManager"
+                  moduleName = "SmartBookings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sheheryar/Documents/Mine---/SmartBookings/SmartBookings/SmartBookings/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  uuid = "9B341A75-A9BA-4F66-A75B-1554631A8ECA - bd09813ba176e6c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmartBookings.RouteManager.init(viewRouter: SwiftUI.EnvironmentObject&lt;SmartBookings.ViewRouter&gt;) -&gt; SmartBookings.RouteManager"
+                  moduleName = "SmartBookings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sheheryar/Documents/Mine---/SmartBookings/SmartBookings/SmartBookings/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "10">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7FAB5EFB-147E-4045-B4DF-5EB5B8A819B0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartBookings/Dashboard/Dashboard.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
