@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileTextfield: View {
     var placeHolder: String = "First Name"
     @Binding var textValue: String
-    var verified: Bool = true
+    var verified: Bool = false
     var keyboardType: UIKeyboardType = .default
     var body: some View {
         RoundedRectangle(cornerRadius: 97)
