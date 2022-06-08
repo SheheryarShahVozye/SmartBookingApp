@@ -63,6 +63,10 @@
 		14FCB9FA284FF8430091006F /* CancellationPolicyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FCB9F9284FF8430091006F /* CancellationPolicyScreen.swift */; };
 		14FCB9FC284FF8A30091006F /* CancelationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FCB9FB284FF8A30091006F /* CancelationCard.swift */; };
 		14FCB9FE284FFBE40091006F /* AddOnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FCB9FD284FFBE40091006F /* AddOnScreen.swift */; };
+		14FCBA0028506A4C0091006F /* MyServiceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FCB9FF28506A4C0091006F /* MyServiceScreen.swift */; };
+		14FCBA0228506B940091006F /* MyServiceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FCBA0128506B940091006F /* MyServiceCard.swift */; };
+		14FCBA04285072B10091006F /* ServiceBookingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FCBA03285072B00091006F /* ServiceBookingScreen.swift */; };
+		14FCBA06285073BC0091006F /* ServiceBookingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FCBA05285073BC0091006F /* ServiceBookingCard.swift */; };
 		14FF0CD2283A220600F620E1 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF0CD1283A220600F620E1 /* ViewRouter.swift */; };
 		14FF0CD4283B878400F620E1 /* RecomHotelsCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF0CD3283B878400F620E1 /* RecomHotelsCards.swift */; };
 		14FF0CD6283BDC0100F620E1 /* SearchArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF0CD5283BDC0100F620E1 /* SearchArea.swift */; };
@@ -153,6 +157,10 @@
 		14FCB9F9284FF8430091006F /* CancellationPolicyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellationPolicyScreen.swift; sourceTree = "<group>"; };
 		14FCB9FB284FF8A30091006F /* CancelationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelationCard.swift; sourceTree = "<group>"; };
 		14FCB9FD284FFBE40091006F /* AddOnScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnScreen.swift; sourceTree = "<group>"; };
+		14FCB9FF28506A4C0091006F /* MyServiceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceScreen.swift; sourceTree = "<group>"; };
+		14FCBA0128506B940091006F /* MyServiceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceCard.swift; sourceTree = "<group>"; };
+		14FCBA03285072B00091006F /* ServiceBookingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBookingScreen.swift; sourceTree = "<group>"; };
+		14FCBA05285073BC0091006F /* ServiceBookingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBookingCard.swift; sourceTree = "<group>"; };
 		14FF0CD1283A220600F620E1 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		14FF0CD3283B878400F620E1 /* RecomHotelsCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomHotelsCards.swift; sourceTree = "<group>"; };
 		14FF0CD5283BDC0100F620E1 /* SearchArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArea.swift; sourceTree = "<group>"; };
@@ -211,6 +219,8 @@
 				1403227D284B97F30036E899 /* RuleCard.swift */,
 				14EF732E284CF72F002CD3E2 /* SafetyCard.swift */,
 				14FCB9FB284FF8A30091006F /* CancelationCard.swift */,
+				14FCBA0128506B940091006F /* MyServiceCard.swift */,
+				14FCBA05285073BC0091006F /* ServiceBookingCard.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -250,6 +260,8 @@
 				14FCB9F7284FF4B20091006F /* BookingTypes.swift */,
 				14FCB9F9284FF8430091006F /* CancellationPolicyScreen.swift */,
 				14FCB9FD284FFBE40091006F /* AddOnScreen.swift */,
+				14FCB9FF28506A4C0091006F /* MyServiceScreen.swift */,
+				14FCBA03285072B00091006F /* ServiceBookingScreen.swift */,
 			);
 			path = ServiceScreen;
 			sourceTree = "<group>";
@@ -677,6 +689,7 @@
 				14AF099A28343290002540A1 /* LoginScreen.swift in Sources */,
 				14AF09B4283624CE002540A1 /* Dashboard.swift in Sources */,
 				14AF09AF283586CB002540A1 /* SignUpScreen.swift in Sources */,
+				14FCBA0028506A4C0091006F /* MyServiceScreen.swift in Sources */,
 				14FCB9FA284FF8430091006F /* CancellationPolicyScreen.swift in Sources */,
 				143CE752284B442E003D7B93 /* AddService.swift in Sources */,
 				143CE74F284AA10C003D7B93 /* MessagesCard.swift in Sources */,
@@ -697,10 +710,12 @@
 				143CE749284A7291003D7B93 /* MyProfileScreen.swift in Sources */,
 				14FF0CD8283BDC8F00F620E1 /* TopNavigation.swift in Sources */,
 				14032278284B55F30036E899 /* BasicinfoCard.swift in Sources */,
+				14FCBA0228506B940091006F /* MyServiceCard.swift in Sources */,
 				1403227E284B97F30036E899 /* RuleCard.swift in Sources */,
 				14ADF9732849474F008D02AE /* Profile.swift in Sources */,
 				1403227C284B97A10036E899 /* RulesScreen.swift in Sources */,
 				143CE754284B44FD003D7B93 /* AddServiceCard.swift in Sources */,
+				14FCBA04285072B10091006F /* ServiceBookingScreen.swift in Sources */,
 				14032276284B540D0036E899 /* BasicInformation.swift in Sources */,
 				141FDF012836A823004B69E3 /* BottomNavigation.swift in Sources */,
 				14AF09A828354FBA002540A1 /* AppUtils.swift in Sources */,
@@ -709,6 +724,7 @@
 				14FCB9F8284FF4B20091006F /* BookingTypes.swift in Sources */,
 				14AF09A528354A08002540A1 /* LoginTextField.swift in Sources */,
 				14AF09B12835FFB9002540A1 /* VerificationComplete.swift in Sources */,
+				14FCBA06285073BC0091006F /* ServiceBookingCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
