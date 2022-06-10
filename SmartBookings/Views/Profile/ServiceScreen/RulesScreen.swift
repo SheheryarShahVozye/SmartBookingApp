@@ -8,7 +8,8 @@
 import SwiftUI
 import UIKit
 struct RulesScreen: View {
-    
+    @State var popuptoggle: Bool = false
+    @EnvironmentObject var viewRouter: ViewRouter
     init() {
         UITextView.appearance().backgroundColor = UIColor.white
     }
@@ -54,10 +55,17 @@ struct RulesScreen: View {
                             .foregroundColor(Color("FEBB12"))
                             .font(Font.custom("poppins", size: 16))
                             .fontWeight(.semibold)
+                            .onTapGesture{
+                                popuptoggle.toggle()
+                            }
                         Spacer()
                         
                     }.padding(.horizontal,20)
                         .padding(.vertical)
+                    
+                    LoginButton(title: "Next", callback: {
+                        viewRouter.currentPage = "SafetyScreen"
+                    })
                 }
                 Spacer()
                 
@@ -65,67 +73,72 @@ struct RulesScreen: View {
                 
                 BottomNavigation()
             }
-            
-            ZStack{
-                VStack {}
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color("000000"))
-                    .edgesIgnoringSafeArea(.all)
-                    .opacity(0.6)
-                
-                RoundedRectangle(cornerRadius: 5)
-                    .frame(width: UIScreen.main.bounds.width - 50, height: 450, alignment: .center)
-                    .foregroundColor(Color("F2F5F9"))
-                    .shadow(color: Color("000000"), radius: 2, x: 0, y: 1)
-                    .overlay(
-                        VStack{
-                            HStack{
-                                Spacer()
-                                Image("CrossIcon")
-                                    .resizable()
-                                    .frame(width: 26, height: 26, alignment: .center)
-                            }.padding(.horizontal)
-                                .padding(.top)
-                            Text("Add Additional Rule")
-                                .foregroundColor(Color("000000").opacity(0.8))
-                                .font(Font.custom("poppins", size: 18))
-                                .fontWeight(.bold)
-                            
-                            RoundedRectangle(cornerRadius: 45)
-                                .frame(width: UIScreen.main.bounds.width - 85, height: 250, alignment: .center)
-                                .foregroundColor(Color("White"))
-                                .shadow(radius: 1)
-                                .overlay(
-                                    VStack{
-                                        TextEditor(text: .constant("dadadadadad"))
-                                            .frame(width: UIScreen.main.bounds.width - 100, height: 210, alignment: .center)
-                                           .lineSpacing(10)
-                                           .autocapitalization(.words)
-                                           .disableAutocorrection(true)
-                                           .cornerRadius(45)
-                                           
-                                    }.padding(.horizontal)
-                                )
-                            
-
-                            RoundedRectangle(cornerRadius: 100)
-                                .frame(width: 200, height: 70, alignment: .center)
-                                .foregroundColor(Color("FEBB12"))
-                                .overlay(
-                                  Text("Done")
-                                    .foregroundColor(Color("04304B"))
-                                    .font(Font.custom("poppins", size: 20))
-                                    .fontWeight(.regular)
-                                ).onTapGesture {
-                                    
-                                }.padding(.vertical,5)
+            if popuptoggle {
+                ZStack{
+                    VStack {}
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Color("000000"))
+                        .edgesIgnoringSafeArea(.all)
+                        .opacity(0.6)
+                    
+                    RoundedRectangle(cornerRadius: 5)
+                        .frame(width: UIScreen.main.bounds.width - 50, height: 450, alignment: .center)
+                        .foregroundColor(Color("F2F5F9"))
+                        .shadow(color: Color("000000"), radius: 2, x: 0, y: 1)
+                        .overlay(
+                            VStack{
+                                HStack{
+                                    Spacer()
+                                    Image("CrossIcon")
+                                        .resizable()
+                                        .frame(width: 26, height: 26, alignment: .center)
+                                        .onTapGesture{
+                                            popuptoggle = false
+                                        }
+                                }.padding(.horizontal)
+                                    .padding(.top)
+                                Text("Add Additional Rule")
+                                    .foregroundColor(Color("000000").opacity(0.8))
+                                    .font(Font.custom("poppins", size: 18))
+                                    .fontWeight(.bold)
                                 
-                            
-                            Spacer()
-                            
-                        }
-                    )
+                                RoundedRectangle(cornerRadius: 45)
+                                    .frame(width: UIScreen.main.bounds.width - 85, height: 250, alignment: .center)
+                                    .foregroundColor(Color("White"))
+                                    .shadow(radius: 1)
+                                    .overlay(
+                                        VStack{
+                                            TextEditor(text: .constant("dadadadadad"))
+                                                .frame(width: UIScreen.main.bounds.width - 100, height: 210, alignment: .center)
+                                               .lineSpacing(10)
+                                               .autocapitalization(.words)
+                                               .disableAutocorrection(true)
+                                               .cornerRadius(45)
+                                               
+                                        }.padding(.horizontal)
+                                    )
+                                
+
+                                RoundedRectangle(cornerRadius: 100)
+                                    .frame(width: 200, height: 70, alignment: .center)
+                                    .foregroundColor(Color("FEBB12"))
+                                    .overlay(
+                                      Text("Done")
+                                        .foregroundColor(Color("04304B"))
+                                        .font(Font.custom("poppins", size: 20))
+                                        .fontWeight(.regular)
+                                    ).onTapGesture {
+                                        
+                                    }.padding(.vertical,5)
+                                    
+                                
+                                Spacer()
+                                
+                            }
+                        )
+                }
             }
+           
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
             .ignoresSafeArea(.all)

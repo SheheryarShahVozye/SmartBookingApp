@@ -14,10 +14,10 @@
             filePath = "SmartBookings/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "RouteManager"
-            landmarkType = "14">
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "previews"
+            landmarkType = "24">
             <Locations>
                <Location
                   uuid = "9B341A75-A9BA-4F66-A75B-1554631A8ECA - c250a9648c810a85"

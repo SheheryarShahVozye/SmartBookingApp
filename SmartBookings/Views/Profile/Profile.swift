@@ -10,6 +10,7 @@ import SwiftUI
 struct Profile: View {
     var textColor: String = "000000"
     var textColorYellow: String = "FEBB12"
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         ZStack{
             VStack{
@@ -45,33 +46,44 @@ struct Profile: View {
                                 Spacer()
                             }
                             HStack{
-                                Group{
-                                    Image("bellicon")
-                                        .scaledToFit()
-                                }.frame(width: 30, height: 22, alignment: .center)
-                                
-                                Text("My Profile")
-                                    .font(Font.custom("poppins", size: 12))
-                                    .fontWeight(.regular)
-                                    .foregroundColor(Color(textColor).opacity(0.6))
-                                    .padding(.leading,5)
+                                HStack{
+                                    Group{
+                                        Image("bellicon")
+                                            .scaledToFit()
+                                    }.frame(width: 30, height: 22, alignment: .center)
+                                    
+                                    Text("My Profile")
+                                        .font(Font.custom("poppins", size: 12))
+                                        .fontWeight(.regular)
+                                        .foregroundColor(Color(textColor).opacity(0.6))
+                                        .padding(.leading,5)
+                                }.onTapGesture{
+                                    viewRouter.currentPage = "MyProfileScreen"
+                                }
+                               
                                 
                                 Spacer()
                             }.padding(.top,5)
                             HStack{
                                 Group{
-                                    Image("messageProfile")
-                                        .scaledToFit()
-                                }.frame(width: 30, height: 22, alignment: .center)
+                                    Group{
+                                        Image("messageProfile")
+                                            .scaledToFit()
+                                    }.frame(width: 30, height: 22, alignment: .center)
+                                    
+                                    Text("Messages")
+                                        .font(Font.custom("poppins", size: 12))
+                                        .fontWeight(.regular)
+                                        .foregroundColor(Color(textColor).opacity(0.6))
+                                        .padding(.leading,5)
+                                }.onTapGesture{
+                                    viewRouter.currentPage = "Messages"
+                                }
                                 
-                                Text("Messages")
-                                    .font(Font.custom("poppins", size: 12))
-                                    .fontWeight(.regular)
-                                    .foregroundColor(Color(textColor).opacity(0.6))
-                                    .padding(.leading,5)
                                 
                                 Spacer()
                             }.padding(.top,5)
+                            
                             HStack{
                                 Group{
                                     Image("balanceProfile")
@@ -94,20 +106,64 @@ struct Profile: View {
                             .padding(.top,5)
                             HStack{
                                 Group{
-                                    Image("vendorIcon")
-                                        .scaledToFit()
-                                }.frame(width: 30, height: 22, alignment: .center)
-                                
-                                Text("Become Vendor")
-                                    .font(Font.custom("poppins", size: 12))
-                                    .fontWeight(.regular)
-                                    .foregroundColor(Color(textColorYellow))
-                                    .padding(.leading,5)
-                                
+                                    Group{
+                                        Image("vendorIcon")
+                                            .scaledToFit()
+                                    }.frame(width: 30, height: 22, alignment: .center)
+                                    
+                                    Text("Become Vendor")
+                                        .font(Font.custom("poppins", size: 12))
+                                        .fontWeight(.regular)
+                                        .foregroundColor(Color(textColorYellow))
+                                        .padding(.leading,5)
+                                } .onTapGesture{
+                                        viewRouter.currentPage = "BecomeVendor"
+                                    }
                                 Spacer()
                                
                                    
                             }.padding(.top,5)
+                       
+                            HStack{
+                                Group{
+                                    Group{
+                                        Image("vendorIcon")
+                                            .scaledToFit()
+                                    }.frame(width: 30, height: 22, alignment: .center)
+                                    
+                                    Text("Add Services")
+                                        .font(Font.custom("poppins", size: 12))
+                                        .fontWeight(.regular)
+                                        .foregroundColor(Color(textColor).opacity(0.6))
+                                        .padding(.leading,5)
+                                } .onTapGesture{
+                                        viewRouter.currentPage = "AddService"
+                                    }
+                                Spacer()
+                               
+                                   
+                            }.padding(.top,5)
+                            
+                            HStack{
+                                Group{
+                                    Group{
+                                        Image("vendorIcon")
+                                            .scaledToFit()
+                                    }.frame(width: 30, height: 22, alignment: .center)
+                                    
+                                    Text("My Services")
+                                        .font(Font.custom("poppins", size: 12))
+                                        .fontWeight(.regular)
+                                        .foregroundColor(Color(textColor).opacity(0.6))
+                                        .padding(.leading,5)
+                                } .onTapGesture{
+                                        viewRouter.currentPage = "MyServiceScreen"
+                                    }
+                                Spacer()
+                               
+                                   
+                            }.padding(.top,5)
+                        
                         }.padding(.top,10)
                        
                         Divider()
@@ -212,48 +268,64 @@ struct Profile: View {
                             }
                             
                             HStack{
-                                Group{
-                                    Image("privacyPolic")
-                                        .scaledToFit()
-                                }.frame(width: 30, height: 30, alignment: .center)
+                                HStack{
+                                    Group{
+                                        Image("privacyPolic")
+                                            .scaledToFit()
+                                    }.frame(width: 30, height: 30, alignment: .center)
+                                    
+                                    Text("Privacy Policy")
+                                        .font(Font.custom("poppins", size: 12))
+                                        .fontWeight(.regular)
+                                        .foregroundColor(Color(textColor).opacity(0.6))
+                                        .padding(.leading,5)
+                                }.onTapGesture{
+                                    viewRouter.currentPage = "PrivacyPolicyScreen"
+                                }
+                               
                                 
-                                Text("Privacy Policy")
-                                    .font(Font.custom("poppins", size: 12))
-                                    .fontWeight(.regular)
-                                    .foregroundColor(Color(textColor).opacity(0.6))
-                                    .padding(.leading,5)
+                                Spacer()
+                               
+                            }.padding(.top,5)
+                                
+                            
+                            HStack{
+                                HStack{
+                                    Group{
+                                        Image("FAQ")
+                                            .scaledToFit()
+                                    }.frame(width: 30, height: 30, alignment: .center)
+                                    
+                                    Text("FAQ's")
+                                        .font(Font.custom("poppins", size: 12))
+                                        .fontWeight(.regular)
+                                        .foregroundColor(Color(textColor).opacity(0.6))
+                                        .padding(.leading,5)
+                                }.onTapGesture{
+                                    viewRouter.currentPage = "FAQs"
+                                }
+                                
                                 
                                 Spacer()
                                
                             }.padding(.top,5)
                             
                             HStack{
-                                Group{
-                                    Image("FAQ")
-                                        .scaledToFit()
-                                }.frame(width: 30, height: 30, alignment: .center)
-                                
-                                Text("FAQ's")
-                                    .font(Font.custom("poppins", size: 12))
-                                    .fontWeight(.regular)
-                                    .foregroundColor(Color(textColor).opacity(0.6))
-                                    .padding(.leading,5)
-                                
-                                Spacer()
+                                HStack{
+                                    Group{
+                                        Image("TOU")
+                                            .scaledToFit()
+                                    }.frame(width: 30, height: 30, alignment: .center)
+                                    
+                                    Text("Terms of Use")
+                                        .font(Font.custom("poppins", size: 12))
+                                        .fontWeight(.regular)
+                                        .foregroundColor(Color(textColor).opacity(0.6))
+                                        .padding(.leading,5)
+                                }.onTapGesture{
+                                    viewRouter.currentPage = "TermsAndConditions"
+                                }
                                
-                            }.padding(.top,5)
-                            
-                            HStack{
-                                Group{
-                                    Image("TOU")
-                                        .scaledToFit()
-                                }.frame(width: 30, height: 30, alignment: .center)
-                                
-                                Text("Terms of Use")
-                                    .font(Font.custom("poppins", size: 12))
-                                    .fontWeight(.regular)
-                                    .foregroundColor(Color(textColor).opacity(0.6))
-                                    .padding(.leading,5)
                                 
                                 Spacer()
                                

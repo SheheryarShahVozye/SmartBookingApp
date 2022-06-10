@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CompanyProfile: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         ZStack{
             VStack{
@@ -71,7 +72,7 @@ struct CompanyProfile: View {
                     }
                     
                     LoginButton(title: "Done", callback: {
-                        
+                        viewRouter.currentPage = "RequestSubmitScreen"
                     }).padding(.vertical)
                  
                 }

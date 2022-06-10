@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddService: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         ZStack{
             VStack{
@@ -31,18 +32,27 @@ struct AddService: View {
                             title: "Basic Information",
                             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac odio at urna curs us lacinia.")
                             .padding(.top)
+                            .onTapGesture{
+                                viewRouter.currentPage = "BasicInformation"
+                            }
                         
                         AddServiceCard(
                             imageName: "serviceDescription",
                             title: "Service Description",
                             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac odio at urna curs us lacinia.")
                             .padding(.top)
+                            .onTapGesture{
+                                viewRouter.currentPage = "RulesScreen"
+                            }
                         
                         AddServiceCard(
                             imageName: "priceTag",
                             title: "Price Details",
                             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac odio at urna curs us lacinia.")
                             .padding(.top)
+                            .onTapGesture{
+                                viewRouter.currentPage = "PriceDetailScreen"
+                            }
                     }
                     .padding()
                 }

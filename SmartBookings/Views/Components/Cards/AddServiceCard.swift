@@ -17,7 +17,7 @@ struct AddServiceCard: View {
         RoundedRectangle(cornerRadius: 7)
             .frame(width: UIScreen.main.bounds.width - 50, height: 135, alignment: .center)
             .foregroundColor(Color("White"))
-            .shadow(radius: 2.5)
+            .shadow(color: Color("000000").opacity(0.6), radius: 0.5, x: 0, y: 0.6)
             .overlay(
                 VStack{
                     HStack{
@@ -34,16 +34,17 @@ struct AddServiceCard: View {
                         VStack{
                             Spacer()
                             HStack {
-                                Text("Basic Information")
+                                Text(title)
                                     .font(Font.custom("poppins", size: 15))
-                                    .foregroundColor(Color("000000").opacity(0.8))
+                                    .foregroundColor(Color("000000").opacity(0.5
+                                                                            ))
                                     .fontWeight(.semibold)
                                 
                                 Spacer()
                             }
                             
                             HStack {
-                                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac odio at urna curs us lacinia.")
+                                Text(description)
                                     .font(Font.custom("poppins", size: 11))
                                     .foregroundColor(Color("000000").opacity(0.8))
                                     .fontWeight(.regular)

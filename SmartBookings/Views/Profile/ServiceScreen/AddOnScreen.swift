@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddOnScreen: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         ZStack{
             VStack{

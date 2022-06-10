@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BasicInformation: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -45,7 +46,7 @@ struct BasicInformation: View {
                         LazyVGrid(columns: columns, spacing: 20) {
                             ForEach(0 ..< types.count, id: \.self) { item in
                                 BasicinfoCard(text: types[item], callback: {
-                                    
+                                    viewRouter.currentPage = "BasicInfoDetail"
                                 })
                             }
                         }

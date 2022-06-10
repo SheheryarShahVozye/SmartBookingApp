@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SafetyScreen: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     @State var safetyTypes: [String] = ["Carbon Monoxide Alarm","Fire Alarm","Fire Extinguisher","First Aid Kit"]
     @State var imageName: [String] = ["CO2ALARM","FIREALARM","FireExtinguisher","firstAid"]
     let columns = [
@@ -46,6 +47,9 @@ struct SafetyScreen: View {
                         LazyVGrid(columns: columns, spacing: 20) {
                             ForEach(0 ..< safetyTypes.count, id: \.self) { item in
                                 SafetyCard(title: safetyTypes[item], imageName: imageName[item])
+                                    .onTapGesture{
+                                        viewRouter.currentPage = "ServiceDescription"
+                                    }
                             }
                         }
                     }.padding(.top)

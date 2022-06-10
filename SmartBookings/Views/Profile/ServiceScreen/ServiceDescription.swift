@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ServiceDescription: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         ZStack{
             VStack{
@@ -108,7 +109,7 @@ struct ServiceDescription: View {
                     }
                     .padding(5)
                     LoginButton(title: "Next", callback: {
-                        
+                        viewRouter.currentPage = "ServiceLocation"
                     }).padding(.bottom)
                     
                 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BookingSettingsScreen: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         ZStack{
             VStack{
@@ -134,7 +135,9 @@ struct BookingSettingsScreen: View {
                                     }.padding(.horizontal)
                                 }
                             
-                            )
+                            ).onTapGesture{
+                                viewRouter.currentPage = "BookingTypes"
+                            }
                         
                         
                         RoundedRectangle(cornerRadius: 8)
@@ -159,7 +162,11 @@ struct BookingSettingsScreen: View {
                                     }.padding(.horizontal)
                                 }
                             
-                            )
+                            ).onTapGesture{
+                                viewRouter.currentPage = "CancellationPolicyScreen"
+                            }
+                        
+                        
                     }.padding(.vertical)
                    
                     VStack{
@@ -200,7 +207,7 @@ struct BookingSettingsScreen: View {
                     }.padding(.horizontal)
                     
                     LoginButton(title: "Next", callback: {
-                        
+                        viewRouter.currentPage = "AddOnScreen"
                     })
                     
                   

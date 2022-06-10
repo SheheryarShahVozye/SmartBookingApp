@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ServiceLocation: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         ZStack{
             VStack{
@@ -49,7 +50,7 @@ struct ServiceLocation: View {
                         }
                         
                         LoginButton(title: "Done", callback: {
-                            
+                            viewRouter.currentPage = "AddService"
                         })
                     }
                     

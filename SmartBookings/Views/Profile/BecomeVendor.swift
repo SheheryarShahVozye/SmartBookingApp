@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BecomeVendor: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         ZStack{
             VStack{
@@ -38,7 +39,11 @@ struct BecomeVendor: View {
                                         .font(Font.custom("poppins", size: 17))
                                         .fontWeight(.regular)
                                 }
-                            )
+                            ).onTapGesture{
+                                viewRouter.currentPage = "CompanyProfile"
+                            }
+                        
+                        
                         RoundedRectangle(cornerRadius: 22)
                             .frame(width: 170, height: 140, alignment: .center)
                             .foregroundColor(Color("White"))

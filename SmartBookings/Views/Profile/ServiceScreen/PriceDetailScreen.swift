@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PriceDetailScreen: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     @State var fromDate: Date = Date()
     var body: some View {
         ZStack{
@@ -399,7 +400,7 @@ struct PriceDetailScreen: View {
                         }
                         
                         LoginButton(title: "Next", callback: {
-                            
+                            viewRouter.currentPage = "BookingSettingsScreen"
                         })
                     }
                 }

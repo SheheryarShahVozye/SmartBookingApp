@@ -20,8 +20,6 @@ struct ContentView: View {
         } else {
             RouteManager()
         }
-        
-       
     }
     
 }
@@ -63,6 +61,54 @@ struct RouteManager: View {
             Profile()
         } else if viewRouter.currentPage == "NotificationScreen" {
             NotificationScreen()
+        } else if viewRouter.currentPage == "MyProfileScreen" {
+            MyProfileScreen()
+        } else if viewRouter.currentPage == "Messages" {
+            Messages()
+        } else if viewRouter.currentPage == "PrivacyPolicyScreen" {
+            PrivacyPolicyScreen()
+        } else if viewRouter.currentPage == "TermsAndConditions" {
+            TermsAndConditions()
+        } else if viewRouter.currentPage == "FAQs" {
+            FAQs()
+        } else if viewRouter.currentPage == "BecomeVendor" {
+            BecomeVendor()
+        }  else if viewRouter.currentPage == "CompanyProfile" {
+            CompanyProfile()
+        } else if viewRouter.currentPage == "RequestSubmitScreen" {
+            RequestSubmitScreen()
+        } else if viewRouter.currentPage == "AddService" {
+            AddService()
+        } else if viewRouter.currentPage == "BasicInformation" {
+            BasicInformation()
+        } else if viewRouter.currentPage == "BasicInfoDetail" {
+            BasicInfoDetail()
+        } else if viewRouter.currentPage == "RulesScreen" {
+            RulesScreen()
+        } else if viewRouter.currentPage == "SafetyScreen" {
+            SafetyScreen()
+        } else if viewRouter.currentPage == "ServiceDescription" {
+            ServiceDescription()
+        } else if viewRouter.currentPage == "ServiceLocation" {
+            ServiceLocation()
+        } else if viewRouter.currentPage == "PriceDetailScreen" {
+            PriceDetailScreen()
+        } else if viewRouter.currentPage == "BookingSettingsScreen" {
+            BookingSettingsScreen()
+        } else if viewRouter.currentPage == "BookingTypes" {
+            BookingTypes()
+        } else if viewRouter.currentPage == "CancellationPolicyScreen" {
+             CancellationPolicyScreen()
+        } else if viewRouter.currentPage == "AddOnScreen" {
+            AddOnScreen()
+        } else if viewRouter.currentPage == "MyServiceScreen" {
+           MyServiceScreen()
+        } else if viewRouter.currentPage == "ServiceBookingScreen" {
+            ServiceBookingScreen()
+        } else if viewRouter.currentPage == "BookingDetailsScreen" {
+             BookingDetailsScreen()
+        } else if viewRouter.currentPage ==  "FilterScreen" {
+            FilterScreen()
         }
     }
 }

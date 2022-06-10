@@ -21,6 +21,9 @@
 		143CE74F284AA10C003D7B93 /* MessagesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143CE74E284AA10C003D7B93 /* MessagesCard.swift */; };
 		143CE752284B442E003D7B93 /* AddService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143CE751284B442E003D7B93 /* AddService.swift */; };
 		143CE754284B44FD003D7B93 /* AddServiceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143CE753284B44FD003D7B93 /* AddServiceCard.swift */; };
+		143F5DE42853930200028244 /* FilterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F5DE32853930200028244 /* FilterScreen.swift */; };
+		143F5DE62853944900028244 /* FilterDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F5DE52853944900028244 /* FilterDropDown.swift */; };
+		143F5DE82853D61B00028244 /* BookingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143F5DE72853D61B00028244 /* BookingDetails.swift */; };
 		1448DAE228425D980096F9F3 /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1448DAE128425D980096F9F3 /* ReviewCard.swift */; };
 		1448DAE528426DEF0096F9F3 /* VendorProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1448DAE428426DEF0096F9F3 /* VendorProfile.swift */; };
 		1448DAE7284275390096F9F3 /* MyBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1448DAE6284275390096F9F3 /* MyBookings.swift */; };
@@ -119,6 +122,9 @@
 		143CE74E284AA10C003D7B93 /* MessagesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCard.swift; sourceTree = "<group>"; };
 		143CE751284B442E003D7B93 /* AddService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddService.swift; sourceTree = "<group>"; };
 		143CE753284B44FD003D7B93 /* AddServiceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceCard.swift; sourceTree = "<group>"; };
+		143F5DE32853930200028244 /* FilterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreen.swift; sourceTree = "<group>"; };
+		143F5DE52853944900028244 /* FilterDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDropDown.swift; sourceTree = "<group>"; };
+		143F5DE72853D61B00028244 /* BookingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetails.swift; sourceTree = "<group>"; };
 		1448DAE128425D980096F9F3 /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
 		1448DAE428426DEF0096F9F3 /* VendorProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorProfile.swift; sourceTree = "<group>"; };
 		1448DAE6284275390096F9F3 /* MyBookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookings.swift; sourceTree = "<group>"; };
@@ -316,6 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				144EBF94283D66BA006A8B48 /* SearchedDetail.swift */,
+				143F5DE32853930200028244 /* FilterScreen.swift */,
+				143F5DE72853D61B00028244 /* BookingDetails.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -347,6 +355,7 @@
 				14FF0CD9283BF2BB00F620E1 /* SearchFields.swift */,
 				14931A7E283C23C60026F135 /* SearchDateControl.swift */,
 				143CE74A284A7AC0003D7B93 /* ProfileTextfield.swift */,
+				143F5DE52853944900028244 /* FilterDropDown.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -711,6 +720,7 @@
 				141FDEFE2836A3D3004B69E3 /* DashboardCards.swift in Sources */,
 				14ADF97128493718008D02AE /* NotificationScreen.swift in Sources */,
 				144EBF95283D66BA006A8B48 /* SearchedDetail.swift in Sources */,
+				143F5DE62853944900028244 /* FilterDropDown.swift in Sources */,
 				14032280284BB7DB0036E899 /* SafetyScreen.swift in Sources */,
 				14AF099A28343290002540A1 /* LoginScreen.swift in Sources */,
 				14AF09B4283624CE002540A1 /* Dashboard.swift in Sources */,
@@ -747,7 +757,9 @@
 				143CE754284B44FD003D7B93 /* AddServiceCard.swift in Sources */,
 				14FCBA04285072B10091006F /* ServiceBookingScreen.swift in Sources */,
 				14032276284B540D0036E899 /* BasicInformation.swift in Sources */,
+				143F5DE42853930200028244 /* FilterScreen.swift in Sources */,
 				141FDF012836A823004B69E3 /* BottomNavigation.swift in Sources */,
+				143F5DE82853D61B00028244 /* BookingDetails.swift in Sources */,
 				147EC4F328513661005D2AE3 /* TermsAndConditions.swift in Sources */,
 				14AF09A828354FBA002540A1 /* AppUtils.swift in Sources */,
 				14F126DE2832AE4E0033B580 /* SmartBookingsApp.swift in Sources */,

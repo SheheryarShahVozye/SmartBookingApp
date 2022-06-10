@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MyProfileScreen: View {
     var textColor: String = "000000"
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         ZStack{
             VStack{
